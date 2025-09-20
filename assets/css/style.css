@@ -1,0 +1,50 @@
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* General Body & Font Styling */
+body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* Subtle, elegant gradient */
+    color: #343a40;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Card Styling for the new background */
+.card {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem !important;
+}
+
+/* Table Styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, 0.02); /* Softer stripe color */
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Button & Link Transitions for smoother interaction */
+.btn, .badge {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
