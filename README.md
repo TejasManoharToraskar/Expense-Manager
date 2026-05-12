@@ -53,6 +53,7 @@ expense-manager/
 
 ## 🚀 Quick setup
 1️⃣ Download or Clone the Project (RUN THIS ON TERMINAL/CMD)
+
 git clone https://github.com/TejasManoharToraskar/Expense-Manager
 
 OR download the ZIP file from GitHub
