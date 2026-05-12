@@ -41,6 +41,7 @@ expense-manager/
 │   └── profile.php
 │   └── report.php
 │   └── reset_budget.php
+│   └── sidebar.php
 │
 ├── assets/
 │   ├── css/
@@ -51,15 +52,49 @@ expense-manager/
 ```
 
 ## 🚀 Quick setup
-1. Copy the project folder to your XAMPP `htdocs/` (or equivalent web root).
-2. Import `db.sql` into your MySQL server (phpMyAdmin or CLI).
-3. Update `config/db.php` with your DB credentials if needed.
-4. Start Apache and MySQL (XAMPP) and open `http://localhost/expense-manager/public/`.
-5. To run analytics:
-   ```bash
-   pip install pandas matplotlib mysql-connector-python
-   python3 report.py
-   ```
+1️⃣ Download or Clone the Project (RUN THIS ON TERMINAL/CMD)
+git clone https://github.com/TejasManoharToraskar/Expense-Manager
+
+OR download the ZIP file from GitHub
+ and extract it.
+
+2️⃣ Move Project to XAMPP Folder
+
+Copy the project folder into:
+
+C:\xampp\htdocs\
+
+Example:
+
+C:\xampp\htdocs\Expense-Manager-v2
+
+3️⃣ Start XAMPP
+
+Open XAMPP
+ and start:
+
+Apache
+MySQL
+
+4️⃣ Create Database
+
+Open browser:
+
+http://localhost/phpmyadmin
+
+Create a new database named:
+expense_manager
+
+Import the included:
+db.sql
+
+file into the database.
+
+5️⃣ Run the Project
+
+Open in browser:
+
+http://localhost/Expense-Manager-v2/public
 
 ## Notes
 - This is a simple starter project meant for learning and portfolio use.
