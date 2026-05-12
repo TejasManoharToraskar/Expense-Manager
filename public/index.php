@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . '/../config/db.php';
 include("header.php");
+include("sidebar.php");
 
 $user_id = 1; // Hardcoded user
 
@@ -40,33 +41,54 @@ while($row = $chart_res->fetch_assoc()) {
 }
 ?>
 
+<div class="main-content">
+
 <h2 class="mb-4">Dashboard</h2>
 
-<div class="row g-3 mb-4">
-  <div class="col-md-4">
-    <div class="card text-white bg-primary">
-      <div class="card-body">
-        <h5 class="card-title">This Month's Expenses</h5>
-        <p class="card-text fs-4">₹<?php echo number_format($total_expenses, 2); ?></p>
-      </div>
+<div class="row g-4 mb-4">
+
+    <div class="col-md-4">
+        <div class="card stats-card expense-card">
+            <div class="card-body">
+
+                <h5>This Month's Expenses</h5>
+
+                <div class="amount">
+                    ₹<?php echo number_format($total_expenses, 2); ?>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card text-white bg-success">
-      <div class="card-body">
-        <h5 class="card-title">Your Monthly Budget</h5>
-        <p class="card-text fs-4">₹<?php echo number_format($monthly_budget, 2); ?></p>
-      </div>
+
+    <div class="col-md-4">
+        <div class="card stats-card budget-card">
+            <div class="card-body">
+
+                <h5>Your Monthly Budget</h5>
+
+                <div class="amount">
+                    ₹<?php echo number_format($monthly_budget, 2); ?>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card text-white <?php echo ($remaining_budget < 0) ? 'bg-danger' : 'bg-info'; ?>">
-      <div class="card-body">
-        <h5 class="card-title">Remaining Budget</h5>
-        <p class="card-text fs-4">₹<?php echo number_format($remaining_budget, 2); ?></p>
-      </div>
+
+    <div class="col-md-4">
+        <div class="card stats-card <?php echo ($remaining_budget < 0) ? 'danger-card' : 'remaining-card'; ?>">
+            <div class="card-body">
+
+                <h5>Remaining Budget</h5>
+
+                <div class="amount">
+                    ₹<?php echo number_format($remaining_budget, 2); ?>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
+
 </div>
 
 <div class="card mb-4">
@@ -122,5 +144,7 @@ new Chart(ctx, {
   }
 });
 </script>
+
+</div>
 
 <?php include("footer.php"); ?>
