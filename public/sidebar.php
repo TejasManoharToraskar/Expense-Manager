@@ -12,13 +12,6 @@
         </li>
 
         <li>
-            <a href="add_expense.php">
-                <i class="bi bi-wallet2"></i>
-                Add Expense
-            </a>
-        </li>
-
-        <li>
             <a href="budget.php">
                 <i class="bi bi-pie-chart-fill"></i>
                 Budget

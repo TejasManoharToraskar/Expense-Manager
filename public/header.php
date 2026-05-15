@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+<button class="menu-toggle" id="menuToggle">
+    ☰
+</button>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
